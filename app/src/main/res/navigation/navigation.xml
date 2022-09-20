@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment_Splass">
+
+    <fragment
+        android:id="@+id/fragmentlogin"
+        android:name="com.example.latihansharedpreferences.Fragmentlogin"
+        android:label="fragmentlogin"
+        tools:layout="@layout/fragmentlogin" >
+        <action
+            android:id="@+id/action_fragmentlogin_to_fragment_home"
+            app:destination="@id/fragment_home" />
+        <action
+            android:id="@+id/action_fragmentlogin_to_fragment_Registrasi"
+            app:destination="@id/fragment_Registrasi" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Registrasi"
+        android:name="com.example.latihansharedpreferences.Fragment_Registrasi"
+        android:label="fragment__registrasi"
+        tools:layout="@layout/fragment__registrasi" >
+        <action
+            android:id="@+id/action_fragment_Registrasi_to_fragmentlogin"
+            app:destination="@id/fragmentlogin" />
+        <action
+            android:id="@+id/action_fragment_Registrasi_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.example.latihansharedpreferences.Fragment_home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_fragmentlogin"
+            app:destination="@id/fragmentlogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Splass"
+        android:name="com.example.latihansharedpreferences.Fragment_Splass"
+        android:label="fragment__splass"
+        tools:layout="@layout/fragment__splass" >
+        <action
+            android:id="@+id/action_fragment_Splass_to_fragmentlogin"
+            app:destination="@id/fragmentlogin" />
+        <action
+            android:id="@+id/action_fragment_Splass_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+</navigation>
